@@ -4,18 +4,22 @@
 This project uses Camel with Mongodb. 
 It connects to Mongo DB running in a docker container over port 27017 and queries data.
 
-Mongo DB:
-> db
+## Mongo DB:
+```
+$ db
 test
-> show dbs
+
+$ show dbs
 local  0.000GB
 test   0.000GB
 
-> db 
+$ db 
 test
-> show collections
+
+$ show collections
 customers
-> db.customers.find().pretty();
+
+$ db.customers.find().pretty();
 {
 	"_id" : ObjectId("569d417122a7ebef10c280af"),
 	"name" : "Cust1",
@@ -30,12 +34,13 @@ customers
 	"city" : "city2",
 	"zip" : "00002"
 }
+```
 
-Main.java:
+## Main.java:
 
 This program prints the data in collection customers
 
-MongoDBFindAllRouteBuilder.java:
+## MongoDBFindAllRouteBuilder.java:
 
 This has the route to findAll from Mongo DB collection
 		
